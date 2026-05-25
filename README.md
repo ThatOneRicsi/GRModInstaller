@@ -81,6 +81,13 @@ The installer currently includes these built-in languages:
 - The application is designed as a single self-contained Windows executable.
 - Release metadata and download links are resolved live from GitHub when the installer starts.
 
+## Credits
+
+- [Skysion3/GRMod](https://github.com/Skysion3/GRMod)
+- Illuminaty and parker for GRMod
+- [mikkokko/csgo_gc](https://github.com/mikkokko/csgo_gc)
+- Mikko Kokko for `csgo_gc`
+
 ## Branding
 
 Copyright Global Retake, globalretake.com
