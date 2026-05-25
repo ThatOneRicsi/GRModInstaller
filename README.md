@@ -83,10 +83,8 @@ The installer currently includes these built-in languages:
 
 ## Credits
 
-- [Skysion3/GRMod](https://github.com/Skysion3/GRMod)
-- Illuminaty and parker for GRMod
-- [mikkokko/csgo_gc](https://github.com/mikkokko/csgo_gc)
-- Mikko Kokko for `csgo_gc`
+- [Skysion3/GRMod](https://github.com/Skysion3/GRMod) by Illuminaty and Parker
+- [mikkokko/csgo_gc](https://github.com/mikkokko/csgo_gc) by Mikko Kokko
 
 ## Branding
 
