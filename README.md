@@ -64,15 +64,6 @@ The installer currently includes these built-in languages:
 - Internet connection
 - Permission to write to the selected install folder
 
-## Build
-
-```powershell
-./publish.ps1
-```
-
-Published output:
-
-`publish\win-x64\GlobalRetakeInstaller.exe`
 
 ## Project Notes
 
