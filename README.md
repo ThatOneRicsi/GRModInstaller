@@ -4,6 +4,17 @@ Lightweight Windows installer for [GRMod](https://github.com/Skysion3/GRMod).
 
 This project provides a simple classic-style setup application that downloads the latest GRMod release from GitHub and installs it into a Counter-Strike: Global Offensive Legacy folder.
 
+## Download
+
+Download the latest installer from the repository's `Releases` page.
+
+## Installation
+
+1. Launch `GlobalRetakeInstaller.exe`
+2. Choose `Full install` or `Patch update`
+3. Confirm or change the install folder
+4. Let the installer download and extract the latest GRMod release
+
 ## Features
 
 - Downloads the latest GRMod release directly from `Skysion3/GRMod`
@@ -63,26 +74,6 @@ The installer currently includes these built-in languages:
 - Windows
 - Internet connection
 - Permission to write to the selected install folder
-
-## Repository Layout
-
-```text
-.
-|-- README.md
-|-- publish.ps1
-`-- src/
-    `-- GlobalRetakeInstaller/
-```
-
-## Build
-
-```powershell
-./publish.ps1
-```
-
-Published output:
-
-`artifacts\publish\win-x64\GlobalRetakeInstaller.exe`
 
 ## Project Notes
 
