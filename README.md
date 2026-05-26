@@ -1,121 +1,152 @@
 # Global Retake Installer
 
-Lightweight Windows installer for [GRMod](https://github.com/Skysion3/GRMod).
+Lightweight Windows installer for GRMod.
 
-A straightforward Windows installer for Counter-Strike: Global Offensive Legacy players who want the latest GRMod build without doing the download and extraction steps by hand.
+---
 
-The installer checks the current release on GitHub, lets the player choose a full install or patch update, adds the install and temp folders to Microsoft Defender exclusions, and installs it to the default game folder or any custom path they choose.
+## Badges
+
+![Release](https://img.shields.io/github/v/release/ThatOneRicsi/GRModInstaller?style=for-the-badge)
+![Downloads](https://img.shields.io/github/downloads/ThatOneRicsi/GRModInstaller/total?style=for-the-badge)
+![Stars](https://img.shields.io/github/stars/ThatOneRicsi/GRModInstaller?style=for-the-badge)
+![Forks](https://img.shields.io/github/forks/ThatOneRicsi/GRModInstaller?style=for-the-badge)
+![Issues](https://img.shields.io/github/issues/ThatOneRicsi/GRModInstaller?style=for-the-badge)
+![Platform](https://img.shields.io/badge/platform-windows-0078D6?style=for-the-badge&logo=windows)
+
+---
+
+## Overview
+
+A lightweight Windows installer for [GRMod](https://github.com/Skysion3/GRMod).
+
+GRMod brings back the 2023 experience to CSGO!
+
+The installer automatically handles:
+- Release detection
+- Installation
+- Patch updates
+- Cleanup and uninstall support
+
+---
 
 ## Download
 
-Download the single-file `GlobalRetakeInstaller.exe` from the repository's `Releases` page.
+Download the latest release:
+
+![Download](https://img.shields.io/badge/DOWNLOAD-LATEST%20RELEASE-2ea44f?style=for-the-badge&logo=windows)
+
+---
 
 ## Installation
 
-1. Launch `GlobalRetakeInstaller.exe`
-2. Choose `Full install` or `Patch update`
-3. Confirm or change the install folder
-4. Let the installer add Microsoft Defender exclusions for the install folder and installer temp folder
-5. Let the installer download and extract the latest GRMod release
+1. Run `GlobalRetakeInstaller.exe`
+2. Select installation type:
+   - Full install
+   - Patch update
+3. Choose installation directory
+4. Confirm Microsoft Defender exclusions
+5. Wait for download and extraction to complete
 
-## Uninstall
+---
 
-1. Launch `GlobalRetakeInstaller.exe`
-2. Select the same GRMod folder that was installed through this app
-3. Click `Uninstall`
-4. Confirm the removal
+## Uninstallation
 
-The uninstall flow removes the files tracked by the installer and rolls back any Defender exclusions that the installer itself added.
+1. Run the installer
+2. Select installed GRMod directory
+3. Click Uninstall
+4. Confirm removal
+
+The uninstaller will:
+- Remove installed files tracked by the installer
+- Restore original `csgo.exe` if replaced
+- Remove Defender exclusions added by the installer
+
+---
 
 ## Screenshots
 
 ### Main Window
+![Main Window](assets/screenshots/installer-home.png)
 
-![Global Retake Installer main window](assets/screenshots/installer-home.png)
+### Download Process
+![Download Process](assets/screenshots/installer-options.png)
 
-### Download Progress
+### Installation Complete
+![Installation Complete](assets/screenshots/installer-progress.png)
 
-![Global Retake Installer downloading the latest GRMod release](assets/screenshots/installer-options.png)
-
-### Completed Install
-
-![Global Retake Installer successful install dialog](assets/screenshots/installer-progress.png)
+---
 
 ## Features
 
-- Downloads the latest GRMod release directly from `Skysion3/GRMod`
-- Supports both `Full install` and `Patch update`
-- Defaults to `C:\Program Files (x86)\Steam\steamapps\common\csgo legacy`
-- Lets the user choose a custom install folder
-- Adds Microsoft Defender exclusions for the selected install folder and the installer's temp workspace
-- Extracts the selected archive directly into the target folder
-- Renames an existing `csgo.exe` to `csgo.exe.old` before replacing it, so the original launcher can be restored later
-- Includes a built-in uninstall option that removes tracked files and reverses installer-added exclusions
-- Requests administrator rights for reliable installs inside `Program Files (x86)`
-- Auto-detects the Windows UI language
-- Includes a built-in language picker inside the installer
+- Automatically fetches latest GRMod release from GitHub
+- Full install and patch update support
+- Default CS:GO Legacy path detection
+- Custom install directory support
+- Microsoft Defender exclusion handling
+- Safe file extraction into target directory
+- Backup system for `csgo.exe` (`csgo.exe.old`)
+- Built-in uninstaller with rollback support
+- Local state tracking for installed files
+- Administrator privilege support
+- Multi-language support
+- Automatic Windows language detection
+
+---
 
 ## Supported Languages
 
-The installer currently includes these built-in languages:
+Arabic, Bulgarian, Catalan, Chinese Simplified, Chinese Traditional, Croatian, Czech, Danish, Dutch, English, Finnish, French, German, Greek, Hungarian, Italian, Japanese, Korean, Norwegian Bokmål, Polish, Portuguese (Brazil), Portuguese (Portugal), Romanian, Russian, Slovak, Slovenian, Spanish, Swedish, Turkish, Ukrainian
 
-- Arabic
-- Bulgarian
-- Catalan
-- Chinese Simplified
-- Chinese Traditional
-- Croatian
-- Czech
-- Danish
-- Dutch
-- English
-- Finnish
-- French
-- German
-- Greek
-- Hungarian
-- Italian
-- Japanese
-- Korean
-- Norwegian Bokmal
-- Polish
-- Portuguese (Brazil)
-- Portuguese (Portugal)
-- Romanian
-- Russian
-- Slovak
-- Slovenian
-- Spanish
-- Swedish
-- Turkish
-- Ukrainian
+---
 
 ## How It Works
 
-1. The installer queries the latest GRMod release from GitHub.
-2. The user chooses `Full install` or `Patch update`.
-3. The installer adds Microsoft Defender exclusions for the selected install folder and its temp workspace.
-4. The archive is downloaded to a temporary folder.
-5. The contents are extracted into the selected game directory.
-6. Existing files are overwritten during extraction.
-7. If the release replaces `csgo.exe`, the existing launcher is renamed to `csgo.exe.old` first.
-8. The installer writes a small local state file so the uninstall option can remove tracked files later and restore the original launcher.
+1. Queries latest GRMod release from GitHub API
+2. User selects install mode
+3. Defender exclusions are applied
+4. Installer downloads release archive
+5. Files are extracted into game directory
+6. Existing files are safely overwritten
+7. `csgo.exe` is backed up if replaced
+8. Local state file is created for uninstall
+
+---
 
 ## Requirements
 
-- Windows
+- Windows 10 or newer
 - Internet connection
-- Permission to write to the selected install folder
+- Write permissions to install directory
+- Administrator rights (recommended for Program Files)
 
-## License
+---
 
-This repository is source-available and free to use, modify, and share, but selling the software or paid copies of it is not allowed. See [LICENSE](LICENSE) for the full terms.
+## Community
+
+Join the official Discord server:
+
+[![Discord](https://img.shields.io/discord/1378340393306028083?style=for-the-badge&logo=discord&color=5865F2)](https://discord.gg/zawBAWuYEg)
 
 ## Credits
 
-- [Skysion3/GRMod](https://github.com/Skysion3/GRMod) by Illuminaty and Parker
-- [mikkokko/csgo_gc](https://github.com/mikkokko/csgo_gc) by Mikko Kokko
+- GRMod by Skysion3: https://github.com/Skysion3/GRMod
+- csgo_gc by Mikko Kokko: https://github.com/mikkokko/csgo_gc
+
+---
+
+## License
+
+Source-available project.
+
+You may use, modify, and distribute it.
+
+Commercial redistribution is not permitted.
+
+See LICENSE for full details.
+
+---
 
 ## Branding
 
-Copyright Global Retake, globalretake.com
+Global Retake  
+globalretake.com
