@@ -2,7 +2,9 @@
 
 Lightweight Windows installer for [GRMod](https://github.com/Skysion3/GRMod).
 
-This project provides a simple classic-style setup application that downloads the latest GRMod release from GitHub and installs it into a Counter-Strike: Global Offensive Legacy folder.
+A straightforward Windows installer for Counter-Strike: Global Offensive Legacy players who want the latest GRMod build without doing the download and extraction steps by hand.
+
+The installer checks the current release on GitHub, lets the player choose a full install or patch update, and installs it to the default game folder or any custom path they choose.
 
 ## Download
 
@@ -75,11 +77,9 @@ The installer currently includes these built-in languages:
 - Internet connection
 - Permission to write to the selected install folder
 
-## Project Notes
+## License
 
-- The installer always pulls the latest release at runtime and is not hardcoded to a single GRMod version.
-- The application is designed as a single self-contained Windows executable.
-- Release metadata and download links are resolved live from GitHub when the installer starts.
+This repository is source-available and free to use, modify, and share, but selling the software or paid copies of it is not allowed. See [LICENSE](LICENSE) for the full terms.
 
 ## Credits
 
